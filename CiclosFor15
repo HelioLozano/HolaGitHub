@@ -1,0 +1,167 @@
+import java.io.*; 
+
+import java.util.*; 
+
+public class CiclosFor15{ 
+
+  
+
+  public static Scanner sc = new Scanner(System.in); 
+
+  public static Scanner leerDatos = new Scanner(System.in); 
+
+  
+
+public static void main(String[] args){ 
+
+  
+
+/* 
+
+  
+
+Programa: Ejercicio 15 
+
+  
+
+Autor: J. Helio Lozano 
+
+  
+
+Se quiere saber el sueldo máxima y el 
+
+mínimo de los directores de una compañía. 
+
+Para ello se leerá el total de Directores de la 
+
+compañía, y los sueldos de cada uno de 
+
+ellos. El programa deberá imprimir la el 
+
+sueldo máximo y mínimo de los directores. 
+
+  
+
+Algoritmo: 
+
+  
+
+start 
+
+  
+
+pedir directores 
+
+  
+
+for(contador=1;contador<=directores;contador++) 
+
+pedir sueldo 
+
+if(contador==1) 
+
+sueldoMaximo=sueldo 
+
+sueldoMinimo=sueldo 
+
+else 
+
+if(sueldo>sueldoMaximo) 
+
+sueldoMaximo=sueldo 
+
+if(sueldo<sueldoMinimo) 
+
+sueldoMinimo=sueldo 
+
+endif 
+
+endfor 
+
+  
+
+print sueldoMaximo 
+
+print sueldoMinimo 
+
+  
+
+end 
+
+  
+
+*/ 
+
+  
+
+int directores, contador=0; 
+
+double sueldo, sueldoMaximo=0, sueldoMinimo=0; 
+
+  
+
+System.out.println("¿Cuántos directores hay en la empresa?"); 
+
+directores=sc.nextInt(); 
+
+System.out.print("\n"); 
+
+  
+
+for(contador=1;contador<=directores;contador++) 
+
+{ 
+
+System.out.print("\tIngrese el sueldo del director #"+contador+" "); 
+
+sueldo=sc.nextDouble(); 
+
+System.out.print("\n"); 
+
+if(contador==1) 
+
+{ 
+
+sueldoMaximo=sueldo; 
+
+sueldoMinimo=sueldo; 
+
+} 
+
+else 
+
+{ 
+
+if(sueldo>sueldoMaximo) 
+
+{ 
+
+sueldoMaximo=sueldo; 
+
+} 
+
+if(sueldo<sueldoMinimo) 
+
+{ 
+
+sueldoMinimo=sueldo; 
+
+} 
+
+} 
+
+} 
+
+  
+
+System.out.print("\t\tEl director con el mayor sueldo gana $"+sueldoMaximo+" M.N.\n"); 
+
+System.out.print("\t\tEl director con el menor sueldo gana $"+sueldoMinimo+" M.N.\n"); 
+
+  
+
+} 
+
+  
+
+} 
